@@ -20,9 +20,9 @@ export class MyApp {
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen, private user: UserService) {
     platform.ready().then(() => {
-      if(user.isLoggedIn()) {alert("x");
+      if(user.isLoggedIn()) {
         this.rootPage = HomePage;
-      } else {alert("y");
+      } else {
         this.rootPage = LoginPage;
       }
       // Okay, so the platform is ready and our plugins are available.
