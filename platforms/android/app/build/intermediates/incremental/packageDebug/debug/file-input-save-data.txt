@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Fri Aug 03 13:53:02 IST 2018
+#Fri Aug 03 21:39:41 IST 2018
 5.base=C\:\\SAHASRANGSHU\\others\\LifeWriter\\platforms\\android\\app\\build\\intermediates\\assets\\debug
 42.base=C\:\\SAHASRANGSHU\\others\\LifeWriter\\platforms\\android\\app\\build\\intermediates\\res\\debug\\resources-debug.ap_
 32.set=ASSET
