@@ -1,17 +1,17 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
-import { WriterPage } from '../writer/writer';
+import { LoginPage } from '../login/login';
 
 @Component({
-  selector: 'page-home',
-  templateUrl: 'home.html'
+  selector: 'page-signup',
+  templateUrl: 'signup.html'
 })
-export class HomePage {
+export class SignupPage {
 
   constructor(public navCtrl: NavController) {
   }
-  goToWriter(params){
+  goToLogin(params){
     if (!params) params = {};
-    this.navCtrl.push(WriterPage);
+    this.navCtrl.push(LoginPage);
   }
 }
