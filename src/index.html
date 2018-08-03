@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+
 <head>
   <meta charset="UTF-8">
   <title>LIFEWriter</title>
@@ -10,7 +11,7 @@
   <link rel="icon" type="image/x-icon" href="assets/icon/favicon.ico">
   <link rel="manifest" href="manifest.json">
   <meta name="theme-color" content="#4e8ef7">
-  
+
   <!-- cordova.js required for cordova apps -->
   <script src="cordova.js"></script>
 
@@ -24,8 +25,22 @@
   </script>-->
 
   <link href="build/main.css" rel="stylesheet">
-
+  <script src="assets/js/firebase/firebase.js"></script>
+  <script src="assets/js/firebase/firebase-app.js"></script>
+  <script src="assets/js/firebase/firebase-database.js"></script>
+  <script type="text/javascript">
+    var firebaseConfig = {
+      apiKey: "AIzaSyDhccxNMQfrZOE8q5BSOwYFs24U4bqjDoM",
+      authDomain: "lifewriter-bb489.firebaseapp.com",
+      databaseURL: "https://lifewriter-bb489.firebaseio.com",
+      projectId: "lifewriter-bb489",
+      storageBucket: "lifewriter-bb489.appspot.com",
+      messagingSenderId: "197898534190"
+    };
+    firebase.initializeApp(firebaseConfig);
+  </script>
 </head>
+
 <body>
 
   <!-- Ionic's root component and where the app will load -->
@@ -42,4 +57,5 @@
   <script src="build/main.js"></script>
 
 </body>
+
 </html>

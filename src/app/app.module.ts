@@ -14,6 +14,9 @@ import { WriterPage } from '../pages/writer/writer';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
+import {DatabaseService} from './../services/database.service';
+import {UserService} from './../services/user.service';
+
 @NgModule({
   declarations: [
     MyApp,
@@ -43,7 +46,9 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    DatabaseService,
+    UserService
   ]
 })
 export class AppModule {}

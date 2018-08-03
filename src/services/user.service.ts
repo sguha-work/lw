@@ -7,7 +7,7 @@ export class UserService {
   }
 
   public isLoggedIn() {
-      if(typeof localStorage["user"] !== "undefined" || localStorage["user"] === null) {
+      if(typeof localStorage["user"] === "undefined" || localStorage["user"] === null) {
           return false;
       } else {
           return true;
