@@ -16,8 +16,9 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 
 import {DatabaseService} from './../services/database.service';
 import {UserService} from './../services/user.service';
-import {ErrorService} from './../services/error.service';
+import {AlertService} from './../services/alert.service';
 import {ValidationService} from './../services/validation.service';
+import {CryptoService} from './../services/crypto.service';
 
 @NgModule({
   declarations: [
@@ -51,8 +52,9 @@ import {ValidationService} from './../services/validation.service';
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     DatabaseService,
     UserService,
-    ErrorService,
-    ValidationService
+    AlertService,
+    ValidationService,
+    CryptoService
   ]
 })
 export class AppModule {}

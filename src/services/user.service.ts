@@ -1,11 +1,12 @@
 import { Injectable } from '@angular/core';
 
 import {DatabaseService} from './database.service';
+import {CryptoService} from './crypto.service';
 
 @Injectable()
 export class UserService {
 
-  constructor(private db: DatabaseService) {
+  constructor(private db: DatabaseService, private crypto: CryptoService) {
   }
 
   public isLoggedIn() {
@@ -16,11 +17,11 @@ export class UserService {
       }
   }
 
-  public isExists(email: string):Promise<any> {
+  public isExists(email: string):Promise<any> {alert(this.crypto.encode(email));
     let p = new Promise((resolve, reject) => {
-        this.db.get(email).then((data) => {
+        this.db.get(this.crypto.encode(email)).then((data) => {console.log("data", data);
             resolve(true);
-        }).catch((error) => {
+        }).catch((error) => {console.log("error", error);
             reject(error);
         });
     });

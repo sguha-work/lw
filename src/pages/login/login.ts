@@ -4,7 +4,8 @@ import { ToastController } from 'ionic-angular';
 
 import {UserService} from './../../services/user.service';
 import {ValidationService} from './../../services/validation.service';
-import {ErrorService} from './../../services/error.service';
+import {AlertService} from './../../services/alert.service';
+
 @Component({
   selector: 'page-login',
   templateUrl: 'login.html'
@@ -12,7 +13,7 @@ import {ErrorService} from './../../services/error.service';
 export class LoginPage {
   public model: any;
   
-  constructor(public navCtrl: NavController, private user: UserService, private toaster: ToastController, private validate: ValidationService, private errorService: ErrorService) {
+  constructor(public navCtrl: NavController, private user: UserService, private toaster: ToastController, private validate: ValidationService, private alertService: AlertService) {
     this.model = {};
     this.model.email = "";
     this.model.password = "";
@@ -20,9 +21,18 @@ export class LoginPage {
 
   public login() {
     if(!this.validate.isValidEmail(this.model.email)) {
-      this.errorService.showError("Invalid email", "error");
+      this.alertService.showAlert("Invalid email", "error");
       return false;
     }
+    if(!this.validate.isValidPassword(this.model.password)) {
+      this.alertService.showAlert("Invalid password", "error");
+      return false;
+    }
+    this.user.isExists(this.model.email).then(() => {
+      // check password
+    }).catch(() => {
+      this.alertService.showAlert("User doesn't exists", "error");
+    });
   }
   
 }
