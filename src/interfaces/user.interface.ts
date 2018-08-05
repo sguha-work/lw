@@ -1,10 +1,10 @@
-interface User {
+export interface User {
     email?: string;
     password?: string;
     name?: string;
     joinedon?: string;
-    lastloggedinon: string;
+    lastloggedinon?: string;
     isVerified?: boolean;
     otp?: number;
-    docs: Array<number>;
+    docs?: Array<number>;
 }

@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
 
+import {User} from './../interfaces/user.interface';
+
 import {DatabaseService} from './database.service';
 import {CryptoService} from './crypto.service';
 
@@ -26,6 +28,18 @@ export class UserService {
         });
     });
     return p;
+  }
+
+  public signup(user: User): Promise<any> {
+    return new Promise((resolve, reject) => {
+        this.db.set("lw/user/"+user.email, user).then((data) => {
+            console.log(data);
+            resolve();
+        }).catch((error) => {
+            console.log(error);
+            reject();
+        });
+    });
   }
   
 }

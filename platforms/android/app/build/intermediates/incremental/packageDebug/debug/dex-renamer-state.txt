@@ -1,4 +1,4 @@
-#Fri Aug 03 23:15:27 IST 2018
+#Sun Aug 05 23:41:23 IST 2018
 base.0=C\:\\SAHASRANGSHU\\others\\LifeWriter\\platforms\\android\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0
 renamed.0=classes.dex
 file.0=C\:\\SAHASRANGSHU\\others\\LifeWriter\\platforms\\android\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0\\classes.dex

@@ -23,7 +23,7 @@
     <button (click)="login()" id="login-button1" ion-button color="assertive" block>
       Log in
     </button>
-    <button id="login-button2" ion-button clear color="light" block href-inappbrowser="/signup">
+    <button id="login-button2" (click)="gotoSignup()" ion-button clear color="light" block href-inappbrowser="/signup">
       Or create an account
     </button>
   </form>

@@ -8,31 +8,31 @@
       <ion-label>
         Name
       </ion-label>
-      <ion-input type="text" placeholder="Enter your name"></ion-input>
+      <ion-input name="name" type="text" placeholder="Enter your name" [(ngModel)]="name"></ion-input>
     </ion-item>
     <div class="spacer" style="width:300px;height:24px;" id="signup-spacer3"></div>
     <ion-item id="signup-input4">
       <ion-label>
         Email
       </ion-label>
-      <ion-input type="email" placeholder="Enter your email"></ion-input>
+      <ion-input name="email" type="email" placeholder="Enter your email" [(ngModel)]="email"></ion-input>
     </ion-item>
     <div class="spacer" style="width:300px;height:21px;" id="signup-spacer4"></div>
-    <ion-item id="signup-input6">
+    <!-- <ion-item id="signup-input6">
       <ion-label>
         OTP
       </ion-label>
       <ion-input type="password" placeholder="Enter OTP sent via email"></ion-input>
-    </ion-item>
+    </ion-item> -->
     <div class="spacer" style="width:300px;height:21px;" id="signup-spacer14"></div>
     <ion-item id="signup-input5">
       <ion-label>
         Password
       </ion-label>
-      <ion-input type="text" placeholder="Enter desired password"></ion-input>
+      <ion-input name="password" type="text" placeholder="Enter desired password" [(ngModel)]="password"></ion-input>
     </ion-item>
     <div class="spacer" style="width:300px;height:54px;" id="signup-spacer5"></div>
-    <button id="signup-button3" ion-button color="assertive" block>
+    <button id="signup-button3" ion-button color="assertive" (click)="join()" block>
       Sign up
     </button>
     <button id="signup-button4" ion-button color="assertive" block on-click="goToLogin()">

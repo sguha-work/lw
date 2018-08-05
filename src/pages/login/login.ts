@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
-import { ToastController } from 'ionic-angular';
+
+import {SignupPage} from './../signup/signup';
 
 import {UserService} from './../../services/user.service';
 import {ValidationService} from './../../services/validation.service';
@@ -13,7 +14,7 @@ import {AlertService} from './../../services/alert.service';
 export class LoginPage {
   public model: any;
   
-  constructor(public navCtrl: NavController, private user: UserService, private toaster: ToastController, private validate: ValidationService, private alertService: AlertService) {
+  constructor(public navCtrl: NavController, private user: UserService, private validate: ValidationService, private alertService: AlertService) {
     this.model = {};
     this.model.email = "";
     this.model.password = "";
@@ -33,6 +34,10 @@ export class LoginPage {
     }).catch(() => {
       this.alertService.showAlert("User doesn't exists", "error");
     });
+  }
+
+  public gotoSignup() {
+    this.navCtrl.push(SignupPage);
   }
   
 }
